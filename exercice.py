@@ -5,25 +5,36 @@
 def order(values: list = None) -> list:
     if values is None:
         # TODO: demander les valeurs ici
-        pass
-
+        liste = [input(),input(), input(), input(), input(), input(),input(), input(), input(), input(),input()]
+        liste.sort()
+        print(liste)
     return []
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
         # TODO: demander les mots ici
-        pass
+        liste_de_mots = [input(), input()]
+        liste_anagramme= []
+        for premier_mot in liste_de_mots:
+            for deuxieme_mot in liste_de_mots:
+                if premier_mot!= deuxieme_mot and (sorted(premier_mot)==sorted(deuxieme_mot)):
+                    liste_anagramme.append(premier_mot)
 
-    return False
-
+            print(liste_anagramme)
 
 def contains_doubles(items: list) -> bool:
+    my_list = [3, 3, 5, 6, 1, 1]
+    for items in my_list:
+        if my_list.count(items) > 1:
+            return True
     return False
 
 
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
+    grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
+    best_student = best_grades(grades)
     return {}
 
 
@@ -45,14 +56,14 @@ def print_recipe(ingredients) -> None:
 
 
 def main() -> None:
-    print(f"On essaie d'ordonner les valeurs...")
-    order()
+#    print(f"On essaie d'ordonner les valeurs...")
+#    order()
 
-    print(f"On vérifie les anagrammes...")
-    anagrams()
+ #   print(f"On vérifie les anagrammes...")
+ #   anagrams()
 
-    my_list = [3, 3, 5, 6, 1, 1]
-    print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
+#   my_list = [3, 3, 5, 6, 1, 1]
+#    print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
 
     grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
     best_student = best_grades(grades)
